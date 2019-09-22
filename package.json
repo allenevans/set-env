@@ -1,0 +1,48 @@
+{
+  "name": "set-env",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Set environment variables that can be used in other steps",
+  "main": "dist/set-env.js",
+  "scripts": {
+    "build": "webpack --config ./webpack.config.js",
+    "clean": "rimraf dist/",
+    "lint": "tslint -c tslint.json --project tsconfig.json",
+    "prebuild": "npm run clean",
+    "release": "semantic-release",
+    "test": "jest --config=jest.config.js --silent"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allenevans/set-env.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "setup"
+  ],
+  "author": "Allen Evans",
+  "license": "MIT",
+  "devDependencies": {
+    "@actions/core": "1.1.1",
+    "@semantic-release/changelog": "3.0.4",
+    "@semantic-release/commit-analyzer": "6.3.0",
+    "@semantic-release/git": "7.0.16",
+    "@semantic-release/npm": "5.1.15",
+    "@semantic-release/release-notes-generator": "7.3.0",
+    "@types/jest": "24.0.18",
+    "@types/node": "12.7.5",
+    "jest": "24.9.0",
+    "prettier": "1.18.2",
+    "rimraf": "3.0.0",
+    "semantic-release": "15.13.24",
+    "ts-jest": "24.1.0",
+    "ts-loader": "6.1.2",
+    "ts-node": "8.4.1",
+    "tslint": "5.20.0",
+    "tslint-config-airbnb": "5.11.2",
+    "typescript": "3.6.3",
+    "webpack": "4.40.2",
+    "webpack-cli": "3.3.9"
+  }
+}

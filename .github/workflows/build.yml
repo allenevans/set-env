@@ -1,0 +1,41 @@
+name: "build"
+
+on: [pull_request]
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: "Config"
+        run: |
+          git config --global user.email "git-ci@techinity.com"
+          git config --global user.name "gitci"
+
+      - name: "Install dependencies"
+        run: npm install
+
+      - name: "Build"
+        run: npm run build
+
+      - name: "Test"
+        run: npm run test
+
+      - name: "Lint"
+        run: npm run lint
+
+      - name: "Commit build output"
+        run: |
+          git checkout -B "dist/artifacts-${{github.event.number}}"
+          git reset ${{github.event.after}}
+          git add -f dist/
+          git commit -m "ci: build distributables"
+          git push -f https://${{secrets.GH_ACTION_TOKEN}}@github.com/allenevans/set-env.git HEAD:dist/artifacts-${{github.event.number}}
+
+      - name: "Check for uncommitted changes"
+        run: |
+          git diff --exit-code --stat -- . ':!node_modules' \
+          || (echo "##[error] found changed filces after build." \
+              && exit 1)
