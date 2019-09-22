@@ -1,0 +1,46 @@
+name: "release"
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: "Config"
+        run: |
+          echo "Release triggered by ${{github.actor}}"
+          echo "Commit ${{github.event.commits[0].message}}"
+          git config --global user.email "git-ci@techinity.com"
+          git config --global user.name "gitci"
+
+      - name: "Install dependencies"
+        run: npm install
+
+      - name: "Build"
+        run: npm run build
+
+      - name: "Test"
+        run: npm run test
+
+      - name: "Commit build artifacts"
+        if: |
+          contains(github.event.commits[0].message, '[skip ci]') == false &&
+          contains(github.event.commits[0].message, 'release artifacts') == false
+        run: |
+          git add --ignore-errors -f dist/
+          git diff-index --quiet HEAD -- || git commit -m 'release artifacts'
+
+      - name: "Semantic version"
+        if: |
+          contains(github.event.commits[0].message, '[skip ci]') == false &&
+          contains(github.event.commits[0].message, 'release artifacts') == false
+        env:
+          GH_TOKEN: ${{secrets.GITHUB_ACTION_TOKEN}}
+        run: |
+          npm run release
+          git status
