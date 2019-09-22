@@ -1,6 +1,6 @@
 {
   "name": "set-env",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "description": "Set environment variables that can be used in other steps",
   "main": "dist/set-env.js",
