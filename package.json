@@ -17,9 +17,10 @@
     "url": "https://github.com/allenevans/set-env.git"
   },
   "keywords": [
-    "actions",
-    "node",
-    "setup"
+    "github",
+    "action",
+    "environment",
+    "variables"
   ],
   "author": "Allen Evans",
   "license": "MIT",

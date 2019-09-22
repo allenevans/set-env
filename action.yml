@@ -1,6 +1,9 @@
 name: 'set-env'
 description: 'Set environment variables that can be used in other steps'
 author: 'Allen Evans'
+branding:
+  icon: 'globe'
+  color: 'green'
 runs:
   using: 'node12'
   main: 'dist/set-env.js'

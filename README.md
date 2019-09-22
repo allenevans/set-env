@@ -1,5 +1,5 @@
 # set-env
-Github action to set environment variables
+Github action to set environment variables that can be globally accessed between steps.
 
 Example usage:-
 
@@ -14,14 +14,29 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       
-      - name: changed packages
-        id: changed_packages
-        uses: allenevans/set-env@master
+      - name: set env
+        uses: allenevans/set-env@v1.0.0
+        with:
+          MY_ENV_VAR: 'my value'
 
-      - name: Dump steps context
-        env:
-          STEPS_CONTEXT: ${{ toJson(steps) }}
+      - name: Printenv
         run: |
-          echo "$STEPS_CONTEXT"
-          echo "scope=${{steps.changed_packages.outputs.scope}}"
+          echo "MY_ENV_VAR=${MY_ENV_VAR}"
+          printenv
 ```
+
+Notes:-
+* You can set more than one variable at a time e.g.
+    ```
+    - name: set env
+      uses: allenevans/set-env@v1.0.0
+      with:
+        VAR_A: a
+        VAR_B: b
+        VAR_C: C
+    ```
+* Environment variable names are converted to UPPER_SNAKE_CASE by default e.g.
+  ```
+    myVar: abc => MYVAR=abc
+    with space: abc => WITH_SPACE=abc
+  ```
