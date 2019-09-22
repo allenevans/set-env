@@ -7,3 +7,8 @@ branding:
 runs:
   using: 'node12'
   main: 'dist/set-env.js'
+inputs:
+  overwrite:
+    description: 'Overwrite existing environment variables'
+    default: false
+    required: false
