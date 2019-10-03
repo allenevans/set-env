@@ -4,7 +4,7 @@ Github action to set environment variables that can be globally accessed between
 Example usage:-
 
 ```
-name: example-pipline
+name: example-pipeline
 on: [pull_request]
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       
-      - name: set env
+      - name: set environment variables
         uses: allenevans/set-env@v1.0.0
         with:
           MY_ENV_VAR: 'my value'
@@ -28,12 +28,12 @@ jobs:
 Notes:-
 * You can set more than one variable at a time e.g.
     ```
-    - name: set env
+    - name: set many environment variables
       uses: allenevans/set-env@v1.0.0
       with:
-        VAR_A: a
-        VAR_B: b
-        VAR_C: C
+        VAR_A: abc
+        VAR_B: def
+        VAR_C: ghi
     ```
 * Environment variable names are converted to UPPER_SNAKE_CASE by default e.g.
   ```
