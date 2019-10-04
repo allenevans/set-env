@@ -25,6 +25,18 @@ jobs:
           printenv
 ```
 
+By default, overwriting existing environment variables is disabled. The enable, pass the overwrite argument:-
+```
+ steps:
+      - uses: actions/checkout@v1
+      
+      - name: set environment variables
+        uses: allenevans/set-env@v1.0.0
+        with:
+          overwrite: true
+          MY_ENV_VAR: 'my value'
+``` 
+
 Notes:-
 * You can set more than one variable at a time e.g.
     ```

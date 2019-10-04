@@ -1,5 +1,5 @@
 name: 'set-env'
-description: 'Set environment variables that can be used in other steps'
+description: 'Programmatically set global environment variables that can be used in subsequent steps'
 author: 'Allen Evans'
 branding:
   icon: 'globe'
