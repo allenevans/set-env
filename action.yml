@@ -10,5 +10,5 @@ runs:
 inputs:
   overwrite:
     description: 'Overwrite existing environment variables'
-    default: false
+    default: true
     required: false
