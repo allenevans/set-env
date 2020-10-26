@@ -3,7 +3,7 @@ Github action to set environment variables that can be globally accessed between
 
 Example usage:-
 
-```
+```yml
 name: example-pipeline
 on: [pull_request]
 
@@ -26,7 +26,7 @@ jobs:
 ```
 
 By default, overwriting existing environment variables is allowed. To disable, pass the overwrite argument:-
-```
+```yml
  steps:
       - uses: actions/checkout@v1
       
@@ -39,7 +39,7 @@ By default, overwriting existing environment variables is allowed. To disable, p
 
 Notes:-
 * You can set more than one variable at a time e.g.
-    ```
+    ```yml
     - name: set many environment variables
       uses: allenevans/set-env@v1.0.0
       with:
