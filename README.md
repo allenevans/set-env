@@ -3,7 +3,7 @@ Github action to set environment variables that can be globally accessed between
 
 Example usage:-
 
-```
+```yaml
 name: example-pipeline
 on: [pull_request]
 
@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v1
       
       - name: set environment variables
-        uses: allenevans/set-env@v1.0.0
+        uses: allenevans/set-env@v2.0.0
         with:
           MY_ENV_VAR: 'my value'
 
@@ -25,30 +25,18 @@ jobs:
           printenv
 ```
 
-By default, overwriting existing environment variables is allowed. To disable, pass the overwrite argument:-
-```
- steps:
-      - uses: actions/checkout@v1
-      
-      - name: set environment variables
-        uses: allenevans/set-env@v1.0.0
-        with:
-          overwrite: false
-          MY_ENV_VAR: 'my value'
-``` 
-
 Notes:-
 * You can set more than one variable at a time e.g.
-    ```
+```yaml
     - name: set many environment variables
-      uses: allenevans/set-env@v1.0.0
+      uses: allenevans/set-env@v2.0.0
       with:
         VAR_A: abc
         VAR_B: def
         VAR_C: ghi
-    ```
+```
 * Environment variable names are converted to UPPER_SNAKE_CASE by default e.g.
-  ```
+```yaml
     myVar: abc => MYVAR=abc
     with space: abc => WITH_SPACE=abc
-  ```
+```

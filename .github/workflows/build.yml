@@ -31,7 +31,7 @@ jobs:
           git checkout -B "dist/artifacts-${{github.event.number}}"
           git reset ${{github.event.after}}
           git add -f dist/
-          git commit -m "ci: build distributables"
+          git commit -m "ci: build distributables" || true
           git push -f https://${{secrets.GH_ACTION_TOKEN}}@github.com/allenevans/set-env.git HEAD:dist/artifacts-${{github.event.number}}
 
       - name: "Check for uncommitted changes"
