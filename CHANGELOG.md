@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/allenevans/set-env/compare/v1.1.1...v2.0.0) (2020-11-08)
+
+
+### Features
+
+* remove overwrite parameter ([690c599](https://github.com/allenevans/set-env/commit/690c5993905004f2b9a9d970849e430d2824f4fd))
+
+
+### BREAKING CHANGES
+
+* match default environment variable setting behaviour to be consistent with expectations.
+
 ## [1.1.1](https://github.com/allenevans/set-env/compare/v1.1.0...v1.1.1) (2020-10-14)
 
 
