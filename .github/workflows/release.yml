@@ -13,8 +13,6 @@ jobs:
 
       - name: "Config"
         run: |
-          echo "Release triggered by ${{github.actor}}"
-          echo "Commit ${{github.event.commits[0].message}}"
           git config --global user.email "git-ci@techinity.com"
           git config --global user.name "gitci"
 
