@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/allenevans/set-env/compare/v2.0.0...v2.0.1) (2020-11-24)
+
+
+### Bug Fixes
+
+* Prevent arbitrary command injection by commit comment during release. GHSL-2020-229. ([f072c01](https://github.com/allenevans/set-env/commit/f072c0111ab4fcedc4a8d7e56a48978ca02e5d43))
+
 # [2.0.0](https://github.com/allenevans/set-env/compare/v1.1.1...v2.0.0) (2020-11-08)
 
 
