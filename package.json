@@ -1,6 +1,6 @@
 {
   "name": "set-env",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "private": true,
   "description": "Programmatically set global environment variables that can be used in subsequent steps",
   "main": "dist/set-env.js",

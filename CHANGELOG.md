@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/allenevans/set-env/compare/v2.0.1...v2.1.0) (2021-10-22)
+
+
+### Features
+
+* update dependencies ([7c49187](https://github.com/allenevans/set-env/commit/7c491872343aa46e726acf1fa77a54cac16d5d24))
+
 ## [2.0.1](https://github.com/allenevans/set-env/compare/v2.0.0...v2.0.1) (2020-11-24)
 
 
