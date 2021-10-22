@@ -12,7 +12,7 @@ const setEnvironmentVariable = (key: string, value: string) => {
         setEnvironmentVariable(key.replace(/^INPUT_/, ''), `${process.env[key]}`);
       });
   } catch (error) {
-    core.setFailed(error.message);
+    core.setFailed((error as Error).message);
     process.exit(1);
   }
 })();
