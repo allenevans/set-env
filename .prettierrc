@@ -1,7 +1,7 @@
 {
   "arrowParens": "always",
-  "jsxBracketSameLine": false,
   "parser": "typescript",
+  "bracketSameLine": false,
   "printWidth": 140,
   "singleQuote": true,
   "tabWidth": 2,
