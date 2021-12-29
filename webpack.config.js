@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   mode: 'production',
   entry: {
-    ['set-env']: path.resolve('src/main'),
+    'set-env': path.resolve('src/main'),
   },
   resolve: {
     extensions: ['.js', '.json', '.ts'],

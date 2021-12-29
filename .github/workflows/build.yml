@@ -7,7 +7,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: master
+          clean: true
+
+      - name: Clean checkout
+        run: |
+          for tag in `git tag -l`; do git tag -d $tag; done
+          git fetch && git fetch -t && git checkout ${{github.head_ref}}
 
       - name: "Config"
         run: |
