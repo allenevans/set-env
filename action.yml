@@ -5,5 +5,5 @@ branding:
   icon: 'globe'
   color: 'green'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/set-env.js'

@@ -1,12 +1,15 @@
 {
   "extends": [
-    "airbnb-typescript-prettier"
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
+  "plugins": ["@typescript-eslint"],
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
   },
   "env": {
-    "jest": true
+    "jest": true,
+    "node": true
   },
   "rules": {
     "@typescript-eslint/no-var-requires": "off",
