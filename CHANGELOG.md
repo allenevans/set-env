@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/allenevans/set-env/compare/v2.2.0...v3.0.0) (2023-10-31)
+
+
+### Features
+
+* update dependencies including node runtime ([94df20e](https://github.com/allenevans/set-env/commit/94df20e5e700d3e4cf913de284ad045dbca47180))
+
+
+### BREAKING CHANGES
+
+* - requires node 16
+
 # [2.2.0](https://github.com/allenevans/set-env/compare/v2.1.0...v2.2.0) (2021-12-29)
 
 
