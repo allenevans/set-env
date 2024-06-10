@@ -38,7 +38,7 @@ describe('set-env', () => {
   });
 
   it('overwrites existing environment variables', () => {
-    jest.spyOn(process, 'exit').mockImplementation((code?: number): never => {
+    jest.spyOn(process, 'exit').mockImplementation((code: string | number | null | undefined) => {
       throw new Error(`${code}`);
     });
 
@@ -54,7 +54,7 @@ describe('set-env', () => {
 
   describe('exceptions', () => {
     beforeEach(() => {
-      jest.spyOn(process, 'exit').mockImplementation((code?: number): never => {
+      jest.spyOn(process, 'exit').mockImplementation((code: string | number | null | undefined) => {
         throw new Error(`${code}`);
       });
     });
@@ -63,7 +63,7 @@ describe('set-env', () => {
       (<jest.Mock>core.exportVariable).mockImplementation(() => {
         throw new Error('FAIL');
       });
-      jest.spyOn(process, 'exit').mockImplementation((code?: number): never => {
+      jest.spyOn(process, 'exit').mockImplementation((code: string | number | null | undefined) => {
         throw new Error(`${code}`);
       });
 
