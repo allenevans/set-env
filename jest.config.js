@@ -4,7 +4,6 @@ module.exports = {
   resetMocks: true,
   testMatch: ['**/?(*.)spec.ts'],
   testPathIgnorePatterns: ['dist/', 'node_modules/'],
-  testURL: 'http://localhost/',
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },
