@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       
       - name: set environment variables
-        uses: allenevans/set-env@v3.0.0
+        uses: allenevans/set-env@v4.0.0
         with:
           MY_ENV_VAR: 'my value'
 
@@ -29,7 +29,7 @@ Notes:-
 * You can set more than one variable at a time e.g.
 ```yaml
     - name: set many environment variables
-      uses: allenevans/set-env@v3.0.0
+      uses: allenevans/set-env@v4.0.0
       with:
         VAR_A: abc
         VAR_B: def
