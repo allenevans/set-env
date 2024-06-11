@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/allenevans/set-env/compare/v3.0.0...v4.0.0) (2024-06-11)
+
+
+### Features
+
+* upgrade action node runtime to v20 ([6138128](https://github.com/allenevans/set-env/commit/613812875cc3372611ccc53441b5ff2725c20807))
+
+
+### BREAKING CHANGES
+
+* - upgrade action to use node20 runtime
+
 # [3.0.0](https://github.com/allenevans/set-env/compare/v2.2.0...v3.0.0) (2023-10-31)
 
 
